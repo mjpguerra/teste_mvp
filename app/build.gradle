@@ -1,0 +1,89 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+apply plugin: 'kotlin-kapt'
+
+android {
+
+    def STRING = "String"
+    def BASE_API_URL = "BASE_API_URL"
+    def AUTHORIZATION = "AUTHORIZATION"
+
+    dataBinding { enabled = true }
+    compileSdkVersion tools.compileSdkVersion
+    buildToolsVersion "29.0.3"
+    defaultConfig {
+        applicationId tools.applicationId
+        minSdkVersion tools.minSdkVersion
+        targetSdkVersion tools.targetSdkVersion
+        versionCode tools.versionCode
+        versionName tools.versionName
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+        buildConfigField STRING, BASE_API_URL, "\"https://devlojong.com/api/\""
+        buildConfigField STRING, AUTHORIZATION, "\"Bearer test\""
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    def v = rootProject.ext.versions
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation "androidx.core:core-ktx:1.2.0"
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$v.kotlin"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$v.coroutines"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$v.coroutines"
+    implementation "org.koin:koin-android:$v.koin"
+    implementation "org.koin:koin-android-viewmodel:$v.koin"
+
+    // region UI
+    implementation "androidx.appcompat:appcompat:$v.androidx"
+    implementation "androidx.recyclerview:recyclerview:$v.androidx_recycler_view"
+    implementation "androidx.fragment:fragment:$v.androidx_fragment"
+    implementation "androidx.constraintlayout:constraintlayout:$v.constraint_layout"
+    implementation "com.google.android.material:material:$v.android_material"
+    implementation "com.github.bumptech.glide:glide:$v.glide"
+
+    // region Networking
+    implementation "com.squareup.okhttp3:logging-interceptor:$v.okhttp"
+    implementation "com.squareup.retrofit2:retrofit:$v.retrofit"
+    implementation "com.google.code.gson:gson:$v.gson"
+    implementation "com.squareup.retrofit2:converter-gson:$v.retrofit"
+
+
+    //Retrofit libraries
+    implementation "com.squareup.retrofit2:retrofit:$v.retrofit"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$v.retrofit"
+    implementation "com.squareup.retrofit2:converter-gson:$v.retrofit"
+
+    //OkHttp3
+    implementation "com.squareup.okhttp3:okhttp:$v.okhttp"
+    implementation "com.squareup.okhttp3:logging-interceptor:$v.okhttp"
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+
+    testImplementation "org.koin:koin-test:$v.koin"
+    testImplementation "com.nhaarman.mockitokotlin2:mockito-kotlin:$v.mockito_kotlin"
+    testImplementation 'android.arch.core:core-testing:1.1.1'
+    testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$v.coroutines"
+
+    //Rx
+    implementation "io.reactivex.rxjava2:rxandroid:$v.rxandroid"
+    implementation "io.reactivex.rxjava2:rxjava:$v.rxjava"
+    implementation "io.reactivex.rxjava2:rxkotlin:$v.rxkotlin"
+}

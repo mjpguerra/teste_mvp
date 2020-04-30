@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#C17C7C</color>
+    <color name="colorPrimaryDark">#C78080</color>
+    <color name="colorAccent">#E09090</color>
+    <color name="colorAccent2">#E89388</color>
+
+    <color name="fundamentals_background">#9bda5e</color>
+    <color name="fundamentals_toolbar">#77CA88</color>
+    <color name="brown">#8B572A</color>
+    <color name="colorOverlay">#88000000</color>
+    <color name="itemDisabled">#979797</color>
+    <color name="navigationBackground">#F7F5F6</color>
+    <color name="white">#FAF8F8</color>
+    <color name="fun_top_bar">#76BE93</color>
+    <color name="custom_text_color">#80848F</color>
+    <color name="gray_background">#ECECEC</color>
+    <color name="blue_background">#4067AB</color>
+    <color name="quote_blue_text_button">#446DAF</color>
+    <color name="quote_grey_text_button">#707070</color>
+    <color name="transparent_background">#11000000</color>
+
+</resources>

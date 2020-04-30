@@ -1,0 +1,24 @@
+<resources>
+
+    <string name="app_name">Lojong</string>
+
+    <string name="fundamentals">Fundamentos</string>
+    <string name="insight">Insight</string>
+    <string name="videos">Vídeos</string>
+    <string name="articles">Artigos</string>
+    <string name="quotes">Citações</string>
+
+    <string name="day">Dia %d</string>
+    <string name="share">Compartilhar</string>
+    <string name="share_by">Compartilhar por</string>
+
+    <string name="videos_not_found">Desculpe, não encontramos nenhum video</string>
+    <string name="articles_not_found">Desculpe, não encontramos nenhum artigo</string>
+    <string name="quotes_not_found">Desculpe, não encontramos nenhuma citação</string>
+    <string name="videos_load_failed">Não conseguimos carregar os videos</string>
+    <string name="articles_load_failed">Não conseguimos carregar os artigos</string>
+    <string name="quotes_load_failed">Não conseguimos carregar as citações</string>
+    <string name="quotes_sharing_failed">Não conseguimos compartilhar esta citação</string>
+
+
+</resources>
